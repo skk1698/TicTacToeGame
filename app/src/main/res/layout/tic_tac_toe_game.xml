@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/tic_tac_toe_background"
+    tools:context=".TicTacToeGameFragment">
+
+    <TextView
+        android:id="@+id/player_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:freezesText="true"
+        android:text="@string/player_1"
+        android:textColor="@color/tic_tac_toe_first_player_color"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/player_one_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:freezesText="true"
+        android:text="@string/initial_score"
+        android:textColor="@color/tic_tac_toe_first_player_color"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@id/player_one"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/pass_phone_to_player_one"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_launcher_foreground_check"
+        app:layout_constraintStart_toEndOf="@id/player_one_score"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/reset"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/player_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:freezesText="true"
+        android:text="@string/player_2"
+        android:textColor="@color/tic_tac_toe_second_player_color"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/player_one" />
+
+    <TextView
+        android:id="@+id/player_two_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:freezesText="true"
+        android:text="@string/initial_score"
+        android:textColor="@color/tic_tac_toe_second_player_color"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@id/player_two"
+        app:layout_constraintTop_toTopOf="@+id/player_two" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/pass_phone_to_player_two"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_launcher_foreground_check"
+        app:layout_constraintStart_toEndOf="@+id/player_two_score"
+        app:layout_constraintTop_toTopOf="@+id/player_two" />
+
+    <include
+        layout="@layout/button_3_by_3_matrix"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/player_two" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

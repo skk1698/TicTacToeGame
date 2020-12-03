@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/tic_tac_toe_background"
+    tools:context=".TicTacToeGameFragment">
+
+
+    <Button
+        android:id="@+id/grid_00"
+        style="@style/TextAppearance.AppCompat.Large"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:autoSizeTextType="uniform"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/grid_01"
+        app:layout_constraintBottom_toTopOf="@+id/grid_10"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintVertical_weight="1"/>
+
+    <Button
+        android:id="@+id/grid_01"
+        style="@style/TextAppearance.AppCompat.Large"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:autoSizeTextType="uniform"
+        app:layout_constraintStart_toEndOf="@+id/grid_00"
+        app:layout_constraintEnd_toStartOf="@+id/grid_02"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/grid_11"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintVertical_weight="1"/>
+
+    <Button
+        android:id="@+id/grid_02"
+        style="@style/TextAppearance.AppCompat.Large"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:autoSizeTextType="uniform"
+        app:layout_constraintStart_toEndOf="@+id/grid_01"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/grid_12"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintVertical_weight="1"/>
+
+    <Button
+        android:id="@+id/grid_10"
+        style="@style/TextAppearance.AppCompat.Large"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:autoSizeTextType="uniform"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/grid_11"
+        app:layout_constraintTop_toBottomOf="@id/grid_00"
+        app:layout_constraintBottom_toTopOf="@id/grid_20"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintVertical_weight="1" />
+
+    <Button
+        android:id="@+id/grid_11"
+        style="@style/TextAppearance.AppCompat.Large"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:autoSizeTextType="uniform"
+        app:layout_constraintStart_toEndOf="@id/grid_10"
+        app:layout_constraintEnd_toStartOf="@id/grid_12"
+        app:layout_constraintTop_toBottomOf="@id/grid_01"
+        app:layout_constraintBottom_toTopOf="@id/grid_21"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintVertical_weight="1"/>
+
+    <Button
+        android:id="@+id/grid_12"
+        style="@style/TextAppearance.AppCompat.Large"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:autoSizeTextType="uniform"
+        app:layout_constraintStart_toEndOf="@id/grid_11"
+        app:layout_constraintTop_toBottomOf="@id/grid_02"
+        app:layout_constraintBottom_toTopOf="@id/grid_22"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintVertical_weight="1"/>
+
+    <Button
+        android:id="@+id/grid_20"
+        style="@style/TextAppearance.AppCompat.Large"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:autoSizeTextType="uniform"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/grid_21"
+        app:layout_constraintTop_toBottomOf="@id/grid_10"
+        app:layout_constraintVertical_weight="1" />
+
+    <Button
+        android:id="@+id/grid_21"
+        style="@style/TextAppearance.AppCompat.Large"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:autoSizeTextType="uniform"
+        app:layout_constraintStart_toEndOf="@id/grid_20"
+        app:layout_constraintEnd_toStartOf="@id/grid_22"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/grid_11"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintVertical_weight="1"/>
+
+    <Button
+        android:id="@+id/grid_22"
+        style="@style/TextAppearance.AppCompat.Large"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:autoSizeTextType="uniform"
+        app:layout_constraintStart_toEndOf="@id/grid_21"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/grid_12"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintVertical_weight="1"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
